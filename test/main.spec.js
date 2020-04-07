@@ -9,7 +9,7 @@ describe('redis', () => {
     expect(client.connected).to.be.true;
   })
 
-  it('Should have a value at key "shout:123"', done => {
+  it('should have a value at key "shout:123"', done => {
     client.get('shout:123', (err, val) => {
       expect(err).to.be.null;
       expect(val).to.equal('Shout is the new Twitter');
